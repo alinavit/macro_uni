@@ -13,8 +13,8 @@ CREATE TABLE IF NOT EXISTS public.countries
 CREATE TABLE IF NOT EXISTS public.states
 (
     state_id character varying(20) NOT NULL,
-    region_name character varying(50) NOT NULL,
-    country_id character(2),
+    state_name character varying(50) NOT NULL,
+    country_id character(2) NOT NULL,
     PRIMARY KEY (state_id)
 );
 
@@ -28,8 +28,8 @@ CREATE TABLE IF NOT EXISTS public.datasets
     dataset_state_id character varying(20) NOT NULL,
     dataset_frequency_id character varying(20) NOT NULL,
     dataset_source_id character varying(50) NOT NULL,
-    dataset_automation_file character varying(500) DEFAULT 'No File found',
-    dataset_instruction character varying(500) DEFAULT 'No File found',
+    dataset_automation_file character varying(500) DEFAULT NULL,
+    dataset_instruction character varying(500) DEFAULT NULL,
     PRIMARY KEY (dataset_id)
 );
 
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS public.sources
 (
     source_id character varying(20),
     source_name character varying(100) NOT NULL,
-    source_link character varying(500) DEFAULT 'No Link available',
+    source_link character varying(500) DEFAULT NULL,
     PRIMARY KEY (source_id)
 );
 
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS public.units
 (
     unit_id character varying(20),
     unit_name character varying(100) NOT NULL,
-    unit_comment character varying(500) DEFAULT 'No Comments',
+    unit_comment character varying(500) DEFAULT NULL,
     PRIMARY KEY (unit_id)
 );
 
@@ -74,11 +74,11 @@ COMMENT ON TABLE public.units
 CREATE TABLE IF NOT EXISTS public.series
 (
     series_id character varying(40),
-    series_name character varying(200) DEFAULT 'NA',
-    dataset_id character varying(50) DEFAULT 'NA',
-    series_frequency_id character varying(50) DEFAULT 'NA',
-    series_unit_id character varying(20) DEFAULT 'NA',
-    series_region_id character varying(20) DEFAULT 'NA',
+    series_name character varying(200) DEFAULT NULL,
+    dataset_id character varying(50) DEFAULT NULL,
+    series_frequency_id character varying(50) DEFAULT NULL,
+    series_unit_id character varying(20) DEFAULT NULL,
+    series_state_id character varying(20) DEFAULT NULL,
     PRIMARY KEY (series_id)
 );
 
@@ -138,6 +138,22 @@ ALTER TABLE IF EXISTS public.series
 ALTER TABLE IF EXISTS public.series
     ADD FOREIGN KEY (dataset_id)
     REFERENCES public.datasets (dataset_id) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public.series
+    ADD FOREIGN KEY (series_state_id)
+    REFERENCES public.states (state_id) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public.series
+    ADD FOREIGN KEY (series_frequency_id)
+    REFERENCES public.frequencies (frequency_id) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
