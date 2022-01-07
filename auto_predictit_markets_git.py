@@ -5,16 +5,18 @@ from bs4 import BeautifulSoup
 
 import json
 
-import psycopg2 as psql #POSTGRES
+import psycopg2 #POSTGRES
 
-##COPY DB_M_UNI_CONNECTION.PY##
-###############################
-###############################
-###############################
-###############################
-###############################
+import db_connect
 
-#cursor
+conn = psycopg2.connect(
+    host = db_connect.UniProd.host,
+    database = db_connect.UniProd.database,
+    user = db_connect.UniProd.user,
+    password = db_connect.UniProd.password
+
+)
+
 cur = conn.cursor()
 
 url = 'https://www.predictit.org/api/marketdata/all/'
