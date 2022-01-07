@@ -19,6 +19,6 @@ This data shows the emission released at locations where fossil fuels are consum
 *Example for US, Total*  
 [Direct Source to data (json)](http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EMISS.CO2-TOTV-TT-TO-US.A) *API KEY REQUIRED*  
 [*Alternative View*](https://www.eia.gov/opendata/qb.php?category=2251669&sdid=EMISS.CO2-TOTV-TT-TO-US.A)  
-
+[Automation Python](https://github.com/alinavit/macro_uni/blob/main/auto_eia_emmision_git.py)  
 
 
