@@ -11,7 +11,7 @@ states_dict = {
     'NM': 'nm_us', 'NY': 'ny_us', 'NC': 'nc_us', 'ND': 'nd_us', 'OH': 'oh_us', 'OK': 'ok_us', 'OR': 'or_us',
     'PA': 'pa_us', 'RI': 'ri_us', 'SC': 'sc_us', 'SD': 'sd_us',
     'TN': 'tn_us', 'TX': 'tx_us', 'UT': 'ut_us', 'VT': 'vt_us', 'VA': 'va_us', 'WA': 'wa_us', 'WV': 'wv_us',
-    'WI': 'wi_us', 'WY': 'wy_us', 'US': 'us_us'
+    'WI': 'wi_us', 'WY': 'wy_us', 'US': 'total_us'
 }
 
 import psycopg2
