@@ -37,3 +37,8 @@ This source presents some data of the Mpnetary Statistics of the Central Bank of
 The database includes data from this [file](http://www.bcra.gov.ar/Pdfs/PublicacionesEstadisticas/panhis.xls) sheet: 'Cuadro'.  
 [Automation Python](https://github.com/alinavit/macro_uni/blob/main/auto_bcra_mon_fin_framework_git.py)
 
+
+## Main Variables of the Central Bank of Argentina, BCRA (Argentina)
+[Source](http://www.bcra.gob.ar//PublicacionesEstadisticas/Principales_variables_i.asp)  
+Here can be found top main variables that are presented by BCRA. All data is accessible online on the page.  
+[Automation Python](https://github.com/alinavit/macro_uni/blob/main/auto_bcra_main_var_git.py)  
