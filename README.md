@@ -3,7 +3,7 @@
 Welcome to the data engineering project. The goal of the project is to summarise the knowledge on SQL and Python as well as combination of it. 
 
 The Project contains:  
-1. [**MACRO UNI DB**](https://github.com/alinavit/macro_uni/edit/main/README.md#1macro-uni-db)  
+1. [**MACRO UNI DB**](https://github.com/alinavit/macro_uni#1macro-uni-db)  
     * Description of the database Structure (ERD)  
 2. [**Datasets and Data Extraction/Transformatio/Upload to PostgreSQL using Python**](https://github.com/alinavit/macro_uni/edit/main/README.md#2-datasets-and-data-extractiontransformationupload-to-postgresql-using-python)
     * PredictIt, World
