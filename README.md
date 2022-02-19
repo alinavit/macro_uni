@@ -5,15 +5,15 @@ Welcome to the data engineering project. The goal of the project is to summarise
 The Project contains:  
 1. [**MACRO UNI DB**](https://github.com/alinavit/macro_uni#1macro-uni-db)  
     * Description of the database Structure (ERD)  
-2. [**Datasets and Data Extraction/Transformatio/Upload to PostgreSQL using Python**](https://github.com/alinavit/macro_uni/edit/main/README.md#2-datasets-and-data-extractiontransformationupload-to-postgresql-using-python)
+2. [**Datasets and Data Extraction/Transformatio/Upload to PostgreSQL using Python**](https://github.com/alinavit/macro_uni#2-datasets-and-data-extractiontransformationupload-to-postgresql-using-python)
     * PredictIt, World
     * Energy-Related Carbon Dioxide Emissions by State, EIA, United States
     * Social Progress Index, Social Progress Imperative, World
     * Monetary and Financial Framework, BCRA, Argentina
     * Main Variables of the Central Bank of Argentina, BCRA, Argentina
   
-3. [**Data Visualisation via Power BI (screen pictures)**](https://github.com/alinavit/macro_uni/edit/main/README.md#3-data-visualisation-via-power-bi-screen-pictures)
-4. [**Data Insights, EDA using Python for some datasets**](https://github.com/alinavit/macro_uni/edit/main/README.md#4-data-insights-eda-using-python-for-some-datasets)
+3. [**Data Visualisation via Power BI (screen pictures)**](https://github.com/alinavit/macro_uni#3-data-visualisation-via-power-bi-screen-pictures)
+4. [**Data Insights, EDA using Python for some datasets**](https://github.com/alinavit/macro_uni#4-data-insights-eda-using-python-for-some-datasets)
 
 
 ## 1.MACRO UNI DB
