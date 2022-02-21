@@ -112,8 +112,8 @@ for link, series_id in list(link_series_date.items()):
 
     try:
 
-        driver = webdriver.Chrome(
-            'C:\\Users\\48575\\main_files\\Project\\chromedriver.exe')  # Optional argument, if not specified will search path.
+        driver = webdriver.Chrome('C:\\Users\\48575\\main_files\\Project\\chromedriver.exe')
+
         driver.get(link)
 
         start_date = driver.find_element_by_name('fecha_desde')

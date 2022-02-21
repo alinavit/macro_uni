@@ -90,6 +90,8 @@ conn = psycopg2.connect\
 
 cur = conn.cursor()
 
+series_count = 0
+
 for i in range(df_bcra.shape[0]):
 
     series_date_py = df_bcra['Date'].iloc[i]
@@ -105,8 +107,12 @@ for i in range(df_bcra.shape[0]):
         cur.execute(sql_statement, sql_values)
         conn.commit()
 
+
         print(cur.rowcount, f'series_id -- {db_id}. Date -- {series_date_py}. Value -- {df_bcra[source_id_py].iloc[i]}')
 
+    series_count = series_count+1
+
+print(f'series updated: {series_count}')
 
 cur.close()
 conn.close()
