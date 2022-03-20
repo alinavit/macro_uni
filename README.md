@@ -13,7 +13,7 @@ The Project contains:
     * Main Variables of the Central Bank of Argentina, BCRA, Argentina
   
 3. [**Data Visualisation via Power BI (screen pictures)**](https://github.com/alinavit/macro_uni#3-data-visualisation-via-power-bi-screen-pictures)
-4. [**Data Insights, EDA using Python for some datasets**](https://github.com/alinavit/macro_uni#4-data-insights-eda-using-python-for-some-datasets)
+
 
 
 ## 1.MACRO UNI DB
@@ -77,11 +77,15 @@ Here can be found top main variables that are presented by BCRA. All data is acc
 
 ## 3. Data Visualisation via Power BI (screen pictures)
 
+**COVID New Cases in the United States**  
+  
+![covid_new_cases_total_power_bi](https://github.com/alinavit/macro_uni/blob/main/COVID%20NEW%20CASES.png)
 
-..............................................  
-.............................................  
-.....................................  
-............................  
-......................  
+**COVID New Deaths in the United States, Connecticut**  
+  
+![covid_death_connecticut](https://github.com/alinavit/macro_uni/blob/main/COVID%20NEW%20DEATH%20CONNECTICUT.png) 
 
-## 4. **Data Insights, EDA using Python for some datasets**
+**Which party will control the Senate after 2022 election?. PredictIt**  
+  
+![predictit_6874_](https://github.com/alinavit/macro_uni/blob/main/predictit_6874_.png)
+
