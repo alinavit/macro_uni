@@ -33,7 +33,7 @@ The tables are as follows:
 
 [Entity Relationship Diagram](https://github.com/alinavit/macro_uni/blob/main/01.%20ERD%20Pg%20Admin%204%20database%20m_uni.pgerd)
 (created in phAdmin 4)  
-[Entity Relationship Diagram (picture)](https://github.com/alinavit/macro_uni/blob/main/02.%20ERD%20Pg%20Admin%204%20database%20m_uni%20PICTURE.png)  
+[Entity Relationship Diagram (picture)](https://github.com/alinavit/macro_uni/blob/main/erd_2.png)  
 
 [Entities created in the databse based on SQL script](https://github.com/alinavit/macro_uni/blob/main/03.%20database_entities%20(EMPTY%20TABLES).sql)  
 
