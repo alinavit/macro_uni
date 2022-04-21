@@ -54,8 +54,9 @@ link_series_date = {
     'http://www.bcra.gob.ar//PublicacionesEstadisticas/Principales_variables_datos_i.asp?serie=7920&detalle=Interest Rates on Overnight Repo Transactions for the BCRA (APR %)': 'bcra_main_7920',
     'http://www.bcra.gob.ar//PublicacionesEstadisticas/Principales_variables_datos_i.asp?serie=7921&detalle=Interest Rates on Overnight Reverse Repo Transactions for the BCRA (APR %)': 'bcra_main_7921',
     'http://www.bcra.gob.ar//PublicacionesEstadisticas/Principales_variables_datos_i.asp?serie=7990&detalle=Interest Rates on Overnight Reverse Repo Transactions for the BCRA (EAR %)': 'bcra_main_7990',
-    'http://www.bcra.gob.ar//PublicacionesEstadisticas/Principales_variables_datos_i.asp?serie=7989&detalle=Interest Rates on 7-Day Reverse Repo Transactions for the BCRA (APR %)': 'bcra_main_7989',
-    'http://www.bcra.gob.ar//PublicacionesEstadisticas/Principales_variables_datos_i.asp?serie=7991&detalle=Interest Rates on 7-Day Reverse Repo Transactions for the BCRA (EAR %)': 'bcra_main_7991',
+
+    #'http://www.bcra.gob.ar//PublicacionesEstadisticas/Principales_variables_datos_i.asp?serie=7989&detalle=Interest Rates on 7-Day Reverse Repo Transactions for the BCRA (APR %)': 'bcra_main_7989',
+    #'http://www.bcra.gob.ar//PublicacionesEstadisticas/Principales_variables_datos_i.asp?serie=7991&detalle=Interest Rates on 7-Day Reverse Repo Transactions for the BCRA (EAR %)': 'bcra_main_7991',
     'http://www.bcra.gob.ar//PublicacionesEstadisticas/Principales_variables_datos_i.asp?serie=3139&detalle=Interest Rates on Loans between Private Financial Institutions (BAIBAR) (APR %)': 'bcra_main_3139',
     'http://www.bcra.gob.ar//PublicacionesEstadisticas/Principales_variables_datos_i.asp?serie=1212&detalle=Interest Rates on 30-Day Deposits with Financial Institutions (APR %)': 'bcra_main_1212',
     'http://www.bcra.gob.ar//PublicacionesEstadisticas/Principales_variables_datos_i.asp?serie=7924&detalle=Interest Rates on Loans for Current Account Overdrafts': 'bcra_main_7924',
