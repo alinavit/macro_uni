@@ -1,11 +1,23 @@
+## This pipeline has to create new series when they appear in the source,
+## update existing series
+## write the run info into log file
+## discontinue series that have last series_date < 3 months from the run
+
 import requests
 import json
 import psycopg2 #POSTGRES
 from datetime import datetime
 import db_connect
 
-print('Date:', datetime.now())
+auto_predictit_markets_git_runs = open('C:\\Users\\48575\\Documents\\GitHub\\macro_uni\\auto_predictit_markets_git_runs.txt', 'a')
 
+###CURRENT DATE
+
+run_time = f'Run on: {datetime.now().strftime("%d %b %Y: %H:%M:%S")} CET\n'
+auto_predictit_markets_git_runs.write(run_time)
+print(run_time)
+
+###DB CONNECTION
 try:
     conn = psycopg2.connect(
         host = db_connect.UniProd.host,
@@ -14,23 +26,36 @@ try:
         password = db_connect.UniProd.password
 
     )
+
+    cur = conn.cursor()
+
+    auto_predictit_markets_git_runs.write('Connected to db\n')
     print('Connected to db')
 except:
+    auto_predictit_markets_git_runs.write('Error in connection\n')
     print('Error in connection')
 
 
 
-cur = conn.cursor()
-print('Cursor created')
+auto_predictit_markets_git_runs.write('Cursor created\nExtracting Data...\n')
+print('Cursor created\nExtracting Data...')
 
 
-url = 'https://www.predictit.org/api/marketdata/all/'
-data_json = requests.get(url, 'json').text
+###DATA EXTRACTION
+try:
+    url = 'https://www.predictit.org/api/marketdata/all/'
+    data_json = requests.get(url, 'json').text
 
-full_json_file = json.loads(data_json)
-print('Files extracted')
+    full_json_file = json.loads(data_json)
 
-json_markets = full_json_file['markets'] #markets are basically questions that should be voted by categrory
+    json_markets = full_json_file['markets'] #markets are basically questions that should be voted by categrory
+
+    auto_predictit_markets_git_runs.write('Files extracted\n')
+    print('Files extracted')
+except:
+    auto_predictit_markets_git_runs.write('Error extracting files\n')
+    print('Error extracting files')
+
 
 ## DB insert series
 new_series = []
@@ -58,6 +83,7 @@ for i in range(len(json_markets)):
         if cur.rowcount == 1:
             new_series.append(series_id)
 
+auto_predictit_markets_git_runs.write(f'{len(new_series)} new series have been created: {new_series}\n')
 print(f'{len(new_series)} new series have been created: {new_series}')
 
 cur.execute('''select count(distinct series_id) from series_values where series_id like 'predictit%'  ''')
@@ -89,6 +115,7 @@ for i in range(len(json_markets)):
         if cur.rowcount == 1:
             series_updated.append(series_id)
 
+auto_predictit_markets_git_runs.write(f'{len(series_updated)} out of {total_series[0][0]}  series have been updated\n')
 print(f'{len(series_updated)} out of {total_series[0][0]}  series have been updated')
 
 #close the cursor
@@ -96,4 +123,5 @@ cur.close()
 #close the connection
 conn.close()
 
+auto_predictit_markets_git_runs.write('Disconnected from db\n')
 print('Disconnected from db')
