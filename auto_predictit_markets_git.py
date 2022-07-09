@@ -118,6 +118,40 @@ for i in range(len(json_markets)):
 auto_predictit_markets_git_runs.write(f'{len(series_updated)} out of {total_series[0][0]}  series have been updated\n')
 print(f'{len(series_updated)} out of {total_series[0][0]}  series have been updated')
 
+### Discontinue series that have last series_date < 3 months from the run
+
+##CURRENT STATE. HOW MANY SERIES OF PREDICT_IT ARE DISCONTINUED ATM?
+cur.execute('''select count(*) from series where series_id like '%predictit%' AND series_status = 'discontinued'; ''')
+count_discontinued = cur.fetchall()
+
+sql_statement_discont = '''
+    UPDATE 
+        series 
+    set 
+        series_status = 'discontinued' 
+    where 
+        series_id in 
+        (
+        select 
+            series_id 
+         from 
+            series_values 
+         where 
+            series_id like '%predictit%'
+        group by series_id having MAX(series_date) < CURRENT_DATE - INTERVAL '3 months' 
+        );
+    '''
+cur.execute(sql_statement_discont)
+conn.commit()
+
+cur.execute('''select count(*) from series where series_id like '%predictit%' AND series_status = 'discontinued'; ''')
+count_discontinued_new = cur.fetchall()
+
+discontinued_this_run = count_discontinued_new[0][0] - count_discontinued[0][0]
+
+auto_predictit_markets_git_runs.write(f'{discontinued_this_run} series have been discontinued\n')
+print(f'{discontinued_this_run} series have been discontinued')
+
 #close the cursor
 cur.close()
 #close the connection

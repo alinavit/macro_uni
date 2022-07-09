@@ -6,3 +6,12 @@ Files extracted
 0 new series have been created: []
 667 out of 1721  series have been updated
 Disconnected from db
+Run on: 09 Jul 2022: 19:18:45 CET
+Connected to db
+Cursor created
+Extracting Data...
+Files extracted
+0 new series have been created: []
+667 out of 1721  series have been updated
+626 of series have been discontinued
+Disconnected from db
