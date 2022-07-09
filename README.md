@@ -44,6 +44,7 @@ The tables are as follows:
 PredictIt is a unique and exciting real money site that tests your knowledge of political events by letting you trade shares on everything from the outcome of an election to a Supreme Court decision to major world events.  
 [Direct Source of data (json)](https://www.predictit.org/api/marketdata/all/)  
 [Automation (Python)](https://github.com/alinavit/macro_uni/blob/main/auto_predictit_markets_git.py)  
+[Log File](https://github.com/alinavit/macro_uni/blob/main/auto_predictit_markets_git_runs.txt)
 
 ### Energy-Related Carbon Dioxide Emissions by State, EIA
 [Source](https://www.eia.gov/)    
