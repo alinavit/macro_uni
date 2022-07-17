@@ -2,9 +2,10 @@ import requests
 import json
 import psycopg2
 import db_connect
+from datetime import datetime
 
-re_js = requests.get('https://data.cdc.gov/api/views/9mfq-cb36/rows.json?accessType=DOWNLOAD').text
-js = json.loads(re_js)
+
+
 
 #submission_date -- Date of counts
 #state -- Jurisdiction
@@ -28,26 +29,55 @@ js = json.loads(re_js)
 #js['data'][13] -> new_case
 #js['data'][18] -> new_death
 
-js_data = js['data']
+auto_cdc_covid_data_runs = open('C:\\Users\\48575\\Documents\\GitHub\\macro_uni\\auto_cdc_covid_data_runs.txt', 'a')
 
+###CURRENT DATE
+run_time = f'Run on: {datetime.now().strftime("%d %b %Y: %H:%M:%S")} CET\n'
+auto_cdc_covid_data_runs.write(run_time)
+print(run_time)
+
+
+###DB CONNECTION
 try:
     conn = psycopg2.connect(
-        host=db_connect.UniProd.host,
-        database=db_connect.UniProd.database,
-        user=db_connect.UniProd.user,
-        password=db_connect.UniProd.password
+        host = db_connect.UniProd.host,
+        database = db_connect.UniProd.database,
+        user = db_connect.UniProd.user,
+        password = db_connect.UniProd.password
+
     )
 
     cur = conn.cursor()
 
-    print('Connected to the database')
+
+    auto_cdc_covid_data_runs.write('Connected to db\n')
+    print('Connected to db')
 except:
-    print('Problems with connection to  the database')
+    auto_cdc_covid_data_runs.write('Error in connection\n')
+    print('Error in connection')
 
-variables = {'new_case': 'Number of new cases',
-             'new_death': 'Number of new deaths'
-            }
 
+auto_cdc_covid_data_runs.write('Cursor created\nExtracting Data...\n')
+print('Cursor created\nExtracting Data...')
+
+###DATA EXTRACTION
+try:
+    re_js = requests.get('https://data.cdc.gov/api/views/9mfq-cb36/rows.json?accessType=DOWNLOAD').text
+    js = json.loads(re_js)
+
+    js_data = js['data']
+
+    variables = {'new_case': 'Number of new cases',
+                 'new_death': 'Number of new deaths'}
+
+    auto_cdc_covid_data_runs.write('Files extracted\n')
+    print('Files extracted')
+except:
+    auto_cdc_covid_data_runs.write('Error extracting files\n')
+    print('Error extracting files')
+
+
+new_series = []
 for i in range(len(js_data)):
 
     if js_data[i][9] not in ['FSM', 'PW', 'RMI']:  ##EXCEPTIONS FROM THE SOURCE
@@ -75,6 +105,8 @@ for i in range(len(js_data)):
                 cur.execute(sql_statement, sql_values)
                 conn.commit()
 
+                if cur.rowcount == 1:
+                    new_series.append(series_id)
 
             except:
                 print(f'INSERT INTO SERIES FAILED, source: {i}')
@@ -107,7 +139,22 @@ for i in range(len(js_data)):
                 print(f'Error inserting into database, source: {i}')
                 pass
 
-print('Execution finished')
 
+auto_cdc_covid_data_runs.write(f'{len(new_series)} new series have been created: {new_series}\n')
+print(f'{len(new_series)} new series have been created: {new_series}')
+
+auto_cdc_covid_data_runs.write('Successful update\n')
+print('Successful update')
+
+
+###DB CONNECTION ENDING
+#close the cursor
 cur.close()
+#close the connection
 conn.close()
+
+
+auto_cdc_covid_data_runs.write('Disconnected from db\n\n')
+print('Disconnected from db')
+
+auto_cdc_covid_data_runs.close()

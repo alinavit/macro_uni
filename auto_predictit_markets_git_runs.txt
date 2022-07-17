@@ -33,3 +33,57 @@ Files extracted
 667 out of 1721  series have been updated
 0 series have been discontinued
 Disconnected from db
+Run on: 11 Jul 2022: 22:40:11 CET
+Connected to db
+Cursor created
+Extracting Data...
+Files extracted
+4 new series have been created: ['predictit_8013_30951', 'predictit_8013_30952', 'predictit_8013_30953', 'predictit_8013_30954']
+671 out of 1721  series have been updated
+0 series have been discontinued
+Disconnected from db
+Run on: 13 Jul 2022: 20:58:27 CET
+Connected to db
+Cursor created
+Extracting Data...
+Files extracted
+13 new series have been created: ['predictit_8014_30955', 'predictit_8014_30956', 'predictit_8014_30957', 'predictit_8015_30962', 'predictit_8015_30960', 'predictit_8015_30959', 'predictit_8015_30958', 'predictit_8015_30963', 'predictit_8015_30964', 'predictit_8015_30967', 'predictit_8015_30965', 'predictit_8015_30961', 'predictit_8015_30966']
+684 out of 1725  series have been updated
+0 series have been discontinued
+Disconnected from db
+Run on: 14 Jul 2022: 22:42:47 CET
+Connected to db
+Cursor created
+Extracting Data...
+Files extracted
+24 new series have been created: ['predictit_8016_30968', 'predictit_8017_30971', 'predictit_8017_30975', 'predictit_8017_30976', 'predictit_8017_30969', 'predictit_8017_30972', 'predictit_8017_30973', 'predictit_8017_30970', 'predictit_8017_30974', 'predictit_8017_30977', 'predictit_8018_30978', 'predictit_8018_30985', 'predictit_8018_30986', 'predictit_8018_30979', 'predictit_8018_30983', 'predictit_8018_30982', 'predictit_8018_30984', 'predictit_8018_30981', 'predictit_8018_30980', 'predictit_8019_30991', 'predictit_8019_30988', 'predictit_8019_30987', 'predictit_8019_30989', 'predictit_8019_30990']
+662 out of 1738  series have been updated
+0 series have been discontinued
+Disconnected from db
+Run on: 15 Jul 2022: 18:23:54 CET
+Connected to db
+Cursor created
+Extracting Data...
+Files extracted
+11 new series have been created: ['predictit_8020_30992', 'predictit_8020_30993', 'predictit_8021_30996', 'predictit_8021_30994', 'predictit_8021_30997', 'predictit_8021_30995', 'predictit_8021_30998', 'predictit_8021_31001', 'predictit_8021_30999', 'predictit_8021_31002', 'predictit_8021_31000']
+664 out of 1762  series have been updated
+0 series have been discontinued
+Disconnected from db
+Run on: 17 Jul 2022: 16:29:49 CET
+Connected to db
+Cursor created
+Extracting Data...
+Files extracted
+0 new series have been created: []
+664 out of 1773  series have been updated
+0 series have been discontinued
+Disconnected from db
+Run on: 17 Jul 2022: 16:51:16 CET
+Connected to db
+Cursor created
+Extracting Data...
+Files extracted
+0 new series have been created: []
+664 out of 1773  series have been updated
+0 series have been discontinued
+Disconnected from db

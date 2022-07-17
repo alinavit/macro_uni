@@ -1,0 +1,10 @@
+
+Run on: 17 Jul 2022: 17:11:45 CET
+Connected to db
+Cursor created
+Extracting Data...
+Files extracted
+0 new series have been created: []
+Successful update
+Disconnected from db
+
