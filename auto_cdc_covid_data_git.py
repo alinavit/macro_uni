@@ -143,8 +143,8 @@ for i in range(len(js_data)):
 auto_cdc_covid_data_runs.write(f'{len(new_series)} new series have been created: {new_series}\n')
 print(f'{len(new_series)} new series have been created: {new_series}')
 
-auto_cdc_covid_data_runs.write('Successful update\n')
-print('Successful update')
+auto_cdc_covid_data_runs.write('Successful update of existing series\n')
+print('Successful update of existing series')
 
 
 ###DB CONNECTION ENDING
