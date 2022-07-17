@@ -76,6 +76,13 @@ Here can be found top main variables that are presented by BCRA. All data is acc
 [Automation Python](https://github.com/alinavit/macro_uni/blob/main/auto_bcra_main_var_git.py)  
 
 
+### COVID-19 Cases and Deaths by State over Time (United States)  
+[Source](https://data.cdc.gov/api/views/9mfq-cb36/rows.json?accessType=DOWNLOAD)  
+Daily data on number of new cases and new deaths related to COVID19 in the United States  
+[Automation Python](https://github.com/alinavit/macro_uni/blob/main/auto_cdc_covid_data_git.py)  
+[Log File](https://github.com/alinavit/macro_uni/blob/main/auto_cdc_covid_data_runs.txt)  
+
+
 ## 3. Data Visualisation via Power BI (screen pictures)
 
 **COVID New Cases in the United States**  
