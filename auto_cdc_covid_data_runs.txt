@@ -8,3 +8,12 @@ Files extracted
 Successful update
 Disconnected from db
 
+Run on: 18 Jul 2022: 17:57:25 CET
+Connected to db
+Cursor created
+Extracting Data...
+Files extracted
+0 new series have been created: []
+Successful update of existing series
+Disconnected from db
+

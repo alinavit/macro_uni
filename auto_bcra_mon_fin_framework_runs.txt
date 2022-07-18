@@ -1,0 +1,7 @@
+
+Run on: 18 Jul 2022: 19:01:20 CET
+File Extraction and Data Transformation...
+Connected to db
+Cursor created
+Inserting Data...
+Disconnected from db

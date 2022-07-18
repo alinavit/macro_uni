@@ -1,0 +1,51 @@
+Run on: 18 Jul 2022: 19:55:19 CET
+Data Extraction:
+Max dates extracted
+Max dates have not been extracted
+Max dates extracted
+Max dates extracted
+Max dates have not been extracted
+Max dates have not been extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates have not been extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates have not been extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates have not been extracted
+Max dates extracted
+Max dates have not been extracted
+Max dates extracted
+Max dates have not been extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates have not been extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Max dates extracted
+Connected to db
+work on bcra_reserves_246 donework on bcra_rr_7927 donework on bcra_wer_272 donework on mon_pol_rate_apr_7935 donework on mon_pol_rate_ear_7936 donework on bcra_main_7934 donework on bcra_main_7938 donework on bcra_main_7939 donework on bcra_main_1222 donework on bcra_main_7937 donework on bcra_main_7922 donework on bcra_main_7920 donework on bcra_main_7921 donework on bcra_main_7990 donework on bcra_main_3139 donework on bcra_main_1212 donework on bcra_main_7924 donework on bcra_main_7925 donework on bcra_main_250 donework on bcra_main_251 donework on bcra_main_251_296 donework on bcra_main_296 donework on bcra_main_252 donework on bcra_main_7926 donework on bcra_main_444_459 donework on bcra_main_446_477 donework on bcra_main_450 donework on bcra_main_452_459 donework on bcra_main_7919 donework on bcra_main_392 donework on bcra_main_7931 doneerror running driver bcra_main_7932work on bcra_main_7932 donework on bcra_main_7933 donework on bcra_main_7987 donework on bcra_main_3540 donework on bcra_main_7913 donework on bcra_main_7914 donework on bcra_main_7988 doneDisconnected from db

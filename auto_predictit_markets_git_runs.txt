@@ -87,3 +87,12 @@ Files extracted
 664 out of 1773  series have been updated
 0 series have been discontinued
 Disconnected from db
+Run on: 18 Jul 2022: 17:58:58 CET
+Connected to db
+Cursor created
+Extracting Data...
+Files extracted
+10 new series have been created: ['predictit_8022_31006', 'predictit_8022_31005', 'predictit_8022_31004', 'predictit_8022_31003', 'predictit_8022_31007', 'predictit_8022_31008', 'predictit_8022_31009', 'predictit_8022_31010', 'predictit_8022_31011', 'predictit_8022_31012']
+674 out of 1773  series have been updated
+0 series have been discontinued
+Disconnected from db

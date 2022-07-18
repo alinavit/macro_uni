@@ -5,7 +5,17 @@ import psycopg2
 import db_connect
 import re
 import numpy as np
+from datetime import datetime
 
+auto_bcra_mon_fin_framework_runs = open('C:\\Users\\48575\\Documents\\GitHub\\macro_uni\\auto_bcra_mon_fin_framework_runs.txt', 'a')
+
+###CURRENT DATE
+
+run_time = f'Run on: {datetime.now().strftime("%d %b %Y: %H:%M:%S")} CET\n'
+auto_bcra_mon_fin_framework_runs.write(f'{run_time}File Extraction and Data Transformation...\n')
+print(f'{run_time}File Extraction and Data Transformation...\n')
+
+### FILE EXTRACTION AND DATA TRANSFORMATION
 df_bcra = pd.read_excel(
     'http://www.bcra.gov.ar/Pdfs/PublicacionesEstadisticas/panhis.xls',
     sheet_name = 'Cuadro',
@@ -81,14 +91,28 @@ source_vs_db = {'pan30' : 'bcra_mff_001' ,
                 'pan10' : 'bcra_mff_024'
 
 }
+###DB CONNECTION
+try:
+    conn = psycopg2.connect(
+        host = db_connect.UniProd.host,
+        database = db_connect.UniProd.database,
+        user = db_connect.UniProd.user,
+        password = db_connect.UniProd.password
 
-conn = psycopg2.connect\
-    (host = db_connect.UniProd.host,
-     database = db_connect.UniProd.database,
-     user = db_connect.UniProd.user,
-     password = db_connect.UniProd.password)
+    )
 
-cur = conn.cursor()
+    cur = conn.cursor()
+
+    auto_bcra_mon_fin_framework_runs.write('Connected to db\n')
+    print('Connected to db')
+except:
+    auto_bcra_mon_fin_framework_runs.write('Error in connection\n')
+    print('Error in connection')
+
+
+
+auto_bcra_mon_fin_framework_runs.write('Cursor created\nInserting Data...\n')
+print('Cursor created\nInserting Data...')
 
 series_count = 0
 
@@ -108,11 +132,14 @@ for i in range(df_bcra.shape[0]):
         conn.commit()
 
 
-        print(cur.rowcount, f'series_id -- {db_id}. Date -- {series_date_py}. Value -- {df_bcra[source_id_py].iloc[i]}')
-
     series_count = series_count+1
 
 print(f'series updated: {series_count}')
 
+#close the cursor
 cur.close()
+#close the connection
 conn.close()
+
+auto_bcra_mon_fin_framework_runs.write('Disconnected from db\n')
+print('Disconnected from db')
